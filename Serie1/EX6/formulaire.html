@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 6</title>
+</head>
+<body>
+    <form>
+        <fieldset >
+            <legend>VOS COORDONNEES</legend>
+
+            <label style="display: inline-block; width: 80px;">Nom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom"><br><br>
+
+            <label style="display: inline-block; width: 80px;">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"><br><br>
+
+            <label style="display: inline-block; width: 80px;">Mail :</label>
+            <input type="email" id="mail" name="mail" placeholder="Votre mail"><br><br>
+
+            <label style="display: inline-block; width: 80px;">code :</label>
+            <input type="password" id="code" name="code"><br><br>
+
+            <label style="display: inline-block; width: 80px;">homme :</label>
+            <input type="radio" name="sexe" value="homme"><br><br>
+
+            <label style="display: inline-block; width: 80px;">femme :</label>
+            <input type="radio" name="sexe" value="femme"><br><br>
+
+            <label style="display: inline-block; width: 80px;">votre pays :</label>
+            <select>
+                <option>Maroc</option>
+                <option>France</option>
+                <option>Algérie</option>
+                <option>Tunisie</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>vos gouts</legend>
+
+            <label style="display: inline-block; width: 80px;">pommes :</label>
+            <input type="checkbox"><br><br>
+
+            <label>poires :</label>
+            <input style="display: inline-block; width: 80px;" type="checkbox"><br><br>
+
+            <label style="display: inline-block;">decrivez nous vos gouts en details :</label><br>
+            <textarea rows="5" cols="40" placeholder="Exprimez vous ici ..."></textarea>
+        </fieldset>
+
+        <fieldset>
+            <input type="submit" value="Envoyer">
+        </fieldset>
+    </form>
+
+</body>
+</html>

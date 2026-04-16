@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice 4</title>
+        <style>
+            nav ul{
+                display: flex;
+                list-style: none;
+                justify-content: center;
+            }
+            ul li{
+                margin: 10px;
+            }
+            #actife{
+                background: green;
+            }
+            nav a:hover{
+                background: orange;
+                color: white;
+            }
+            .gallery{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            .gallery img{
+                width: 100%;
+                height: 100%; 
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <h1></h1>
+                <li><a id="actife" href="#">Accueil</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">&Aacute; propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ada_lovelace.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/IBM_Electronic_Data_Processing_Machine_-_GPN-2000-001881.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_%28ca._1695%29.jpg/250px-Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_%28ca._1695%29.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/IBM_Electronic_Data_Processing_Machine_-_GPN-2000-001881.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ada_lovelace.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/IBM_Electronic_Data_Processing_Machine_-_GPN-2000-001881.jpg">
+        </div>
+    </body>
+</html>

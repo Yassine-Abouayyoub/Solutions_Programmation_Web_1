@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de produits</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let produits = [['milk', 4.5], ['tea', 20], ['bread', 50], ['eggs', 8], ['cheese', 15.0]];
+        function affichage(table){
+            document.write("<table>");
+            document.write("<tr><th>Nom</th><th>Prix (DH)</th></tr>");
+            for (let i = 0; i < table.length; i++) {
+                document.write("<tr>");
+                for (let j = 0; j < 2; j++) {
+                    document.write("<td>" + table[i][j] + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+        function ajouter(Nom, prix, table){
+            produits.push([Nom, prix]);
+        }
+        function totale(table){
+            let somme=0;
+            for(let i=0; i<table.length;i++){
+                somme += table[i][1];
+            }
+            return somme;
+        }
+        function chercher(Nom, table){
+            for(let i=0; i<table.length;i++){
+                if (Nom == table[i][0]){
+                    document.write("<p>le produit "+ Nom +": "+ table[i][1] +" DH</p>")
+                }
+            } 
+        }
+
+        function cher(table){
+            for(let i=0; i<table.length;i++){
+                if (30 < table[i][1]){
+                    document.write("<p>le produit "+ table[i][0] +" est superieur a 30DH</p>")
+                }
+            } 
+        }
+
+        ajouter('pomme', 10, produits);
+        affichage(produits);
+        document.write("<p>Totale: "+ totale(produits) +" DH</p>")
+        chercher('milk', produits)
+        cher(produits)
+
+    </script>
+</body>
+</html>

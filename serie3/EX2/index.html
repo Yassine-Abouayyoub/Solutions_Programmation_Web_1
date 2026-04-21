@@ -48,15 +48,16 @@
         function cher(table){
             for(let i=0; i<table.length;i++){
                 if (30 < table[i][1]){
-                    document.write("<p>le produit "+ table[i][0] +" est superieur a 30DH</p>")
+                    return true;
                 }
+                return false;
             } 
         }
 
         ajouter('pomme', 10, produits);
         affichage(produits);
         document.write("<p>Totale: "+ totale(produits) +" DH</p>")
-        chercher('milk', produits)
+        console.log(chercher('milk', produits))
         cher(produits)
         
 

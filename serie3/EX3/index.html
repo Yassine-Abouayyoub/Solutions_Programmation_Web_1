@@ -13,7 +13,7 @@
     <body>
         <fieldset>
             <legend>Formulaire d'inscreption</legend>
-            <form action="/submit" method="post">
+            <form action="/submit" onsubmit="return validerFormulair()" method="post">
                 <lable for="Name">Name: </lable>
                 <input type="text" id="name" name="name"><br><br>
                 <lable for="email">Email: </lable>
@@ -22,7 +22,7 @@
                 <input type="password" id="pwd" name="pwd"><br><br>
                 <lable for="cpwd">Confirmation du mot de passe: </lable>
                 <input type="password" id="cpwd" name="cpwd"><br><br>
-                <input type="submit" value="Envoyer" onclick="validerFormulair()">
+                <input type="submit" value="Envoyer">
             </form>
         </fieldset>
         <script>
@@ -33,6 +33,10 @@
                     return false;
                 }
                 var email = document.getElementById('email').value;
+                if(email==="" || email.includes('@')==false){
+                    alert("email invalide!");
+                    return false;
+                }
                 
             }
         </script>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Convertisseur de devises</title>
+        <style>
+            body{
+                font-family: Arial;
+                background: #f4f6fb;
+                display: flex;
+                justify-content: center;
+                min-height: 100vh;
+                align-items: center;
+                margin: 0;
+            }
+            .container{
+                width: 420px;
+                background: white; 
+                border: 2px solid #d9dfea;
+                border-radius: 15px;
+                padding: 20px;
+                box-shadow: 0 4px 15px #00000014;
+            }
+            .container legend{
+                font-weight: bold;
+                color: #1e2a5a;
+                padding: 0 8px;
+            }
+            #title{
+                text-align: center;
+                color: #666;
+                font-size: 14px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+            }
+            .money-box{
+                border: 2px solid #cfd6e4;
+                border-radius: 12px;
+                padding: 12px;
+            }
+            .row{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .row input{
+                flex: 1;
+                border: none;
+                outline: none;
+                font-size: 22px;
+            }
+            .row select{
+                border: none;
+                outline: none;
+                background: transparent;
+                font-size: 16px;
+            }
+            button{
+                padding: 12px;
+                border: none;
+                border-radius: 10px;
+                background: #1e2a5a;
+                color: white;
+            }
+            button:hover{
+                background: #32458f;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset class="container">
+            <legend>Convertisseur de devises</legend>
+            <p id="title">Bienvenue dans l'outil monétaire</p>
+            <form>
+                <fieldset class="money-box">
+                    <legend>De</legend>
+                    <div class="row">
+                        <input type="number" id="montant" placeholder="Montant à convertir">
+                        <select id="devisDepart">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="MAD">DH</option>
+                            <option value="JPY">YEN</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="money-box">
+                    <legend>Vers</legend>
+                    <div class="row">
+                        <input type="text" id="resultat" placeholder="Résultat" readonly>
+                        <select id="devisArrivee">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="MAD">DH</option>
+                            <option value="JPY">YEN</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <button type="button" onclick="convertir()">Convertir</button>
+            </form>
+        </fieldset>
+
+        <script>
+            function convertir(){
+                let devisDepart = document.getElementById("devisDepart").value;
+                let montant = Number(document.getElementById("montant").value);
+                let devisArrive = document.getElementById("devisArrivee").value;
+                let resultat;
+                let MAD ={
+                    USD: 0.11,
+                    EUR: 0.092,
+                    JPY: 17.23,
+                    MAD: 1
+                };
+                resultat = (montant / MAD[devisDepart]) * MAD[devisArrive];
+                document.getElementById("resultat").value = resultat;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculatrice</title>
+        <style>
+            fieldset{
+                width: 400px;
+            }
+            div{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+            input{
+                width: 100%;
+                font-size: 22px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <input type="text" id="resultat" readonly>
+            <div id="buttons">
+                <button value="7">7</button>
+                <button value="8">8</button>
+                <button value="9">9</button>
+                <button value="/">/</button>
+                <button value="4">4</button>
+                <button value="5">5</button>
+                <button value="6">6</button>
+                <button value="*">*</button>
+                <button value="1">1</button>
+                <button value="2">2</button>
+                <button value="3">3</button>
+                <button value="-">-</button>
+                <button value="0">0</button>
+                <button value="=">=</button>
+                <button value="+">+</button>
+                <button value="c">c</button>
+            </div>
+        </fieldset>
+        <script>
+            function calcule(){
+                let button = getElementById("buttons").value
+                if(button=== "=" || button=== "*" || button=== "-" || button=== "+" || button=== "/"){
+                    let action = button;
+                }
+                if(button==="c"){
+                    let action = "clean"
+                }
+                else{
+                    let valeur = Number(button);
+                    get.ElementById("resultat").valeur = valeur
+                }
+
+            }
+        </script>
+    </body>
+</html>

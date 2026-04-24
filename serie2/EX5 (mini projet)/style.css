@@ -13,13 +13,6 @@
     box-shadow: 10px 10px 5px #a87878;
 }
 
-
-.index nav {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 .index ul{
     display: flex;
     list-style-type: none;
@@ -29,14 +22,17 @@
 
 .index nav a{
     text-decoration: none;
+    padding: 14px 16px;
+}
+
+.index nav a:hover{
     color: white;
+    background: orange;
 }
 
 #actife{
     background: green;
     color: white;
-    padding: 14px 16px;
-
 }
 
 

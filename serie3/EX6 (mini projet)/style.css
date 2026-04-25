@@ -1,0 +1,56 @@
+.index h1{
+    color: blue;
+    text-align: center;
+}
+
+.index p{
+    font-family: Verdana;
+    font-size: 16px;
+}
+
+.index img{
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #a87878;
+}
+
+.index nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.index ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-ajoutant {
+    display: flex;
+    gap: 10px;
+}
+
+
+.index nav a{
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.index nav a:hover{
+    color: white;
+    background: orange;
+}
+
+#actife{
+    background: green;
+    color: white;
+}
+
+
+.presentation h1,
+.presentation p{
+    font-family: Verdana;
+}
